@@ -99,7 +99,7 @@ const getStyle = ({
     marginRight: size.margin.right,
     marginBottom: size.margin.bottom,
     marginLeft: size.margin.left,
-    backgroundColor:"#F7F9FA",
+    backgroundColor:"none",
     borderRadius:"8px",
 
     // ## Avoiding collapsing
