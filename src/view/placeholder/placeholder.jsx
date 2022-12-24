@@ -98,7 +98,7 @@ const getStyle = ({
     marginRight: size.margin.right,
     marginBottom: size.margin.bottom,
     marginLeft: size.margin.left,
-    backgroundColor:"#343a40",
+    backgroundColor:"#F7F9FA",
 
     // ## Avoiding collapsing
     // Avoiding the collapsing or growing of this element when pushed by flex child siblings.
