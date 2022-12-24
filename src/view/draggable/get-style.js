@@ -80,7 +80,7 @@ function getDraggingStyle(dragging: DraggingMapProps): DraggingStyle {
     // ## Movement
     // Opting out of the standard css transition for the dragging item
     transition: getDraggingTransition(shouldAnimate, dropping),
-    transform,
+    transform:`${transform} rotate(3deg)`,
     opacity: getDraggingOpacity(isCombining, isDropAnimating),
     // ## Layering
     zIndex: isDropAnimating

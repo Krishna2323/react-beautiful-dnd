@@ -50,7 +50,8 @@ export const transitions = {
     return `transform ${timing}, opacity ${timing}`;
   },
   outOfTheWay: `transform ${outOfTheWayTiming}`,
-  placeholder: `height ${outOfTheWayTiming}, width ${outOfTheWayTiming}, margin ${outOfTheWayTiming}`,
+  placeholder: `height ${outOfTheWayTiming}, margin ${outOfTheWayTiming}`,
+  // placeholder: `height ${outOfTheWayTiming}, width ${outOfTheWayTiming}, margin ${outOfTheWayTiming}`, //PREVIOUS
 };
 
 const moveTo = (offset: Position): ?string =>
