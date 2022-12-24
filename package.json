@@ -1,6 +1,6 @@
 {
   "name": "@krishna2323/react-beautiful-dnd",
-  "version": "13.1.",
+  "version": "13.1.4",
   "description": "Beautiful and accessible drag and drop for lists with React",
   "author": "Alex Reardon <areardon@atlassian.com>",
   "types": "./types.d.ts",
