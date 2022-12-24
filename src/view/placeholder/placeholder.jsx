@@ -26,6 +26,7 @@ export type PlaceholderStyle = {|
   pointerEvents: 'none',
   transition: ?string,
   backgroundColor:string,
+  borderRadius:string
 |};
 export type Props = {|
   placeholder: PlaceholderType,
@@ -99,6 +100,7 @@ const getStyle = ({
     marginBottom: size.margin.bottom,
     marginLeft: size.margin.left,
     backgroundColor:"#F7F9FA",
+    borderRadius:"8px",
 
     // ## Avoiding collapsing
     // Avoiding the collapsing or growing of this element when pushed by flex child siblings.
