@@ -54,8 +54,8 @@ export const transitions = {
   placeholder: `height ${outOfTheWayTiming}, width ${outOfTheWayTiming}, margin ${outOfTheWayTiming}`, //PREVIOUS
 };
 
-const moveTo = (offset: Position): ?string =>
-  isEqual(offset, origin) ? null : `translate(${offset.x}px, ${offset.y}px)`;
+const moveTo = (offset: Position,rotate?:string = ""): ?string =>
+  isEqual(offset, origin) ? null : `translate(${offset.x}px, ${offset.y}px) ${rotate}`;
 
 export const transforms = {
   moveTo,
