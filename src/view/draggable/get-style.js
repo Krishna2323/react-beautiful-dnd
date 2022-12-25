@@ -76,7 +76,7 @@ function getDraggingStyle(dragging: DraggingMapProps): DraggingStyle {
     boxSizing: 'border-box',
     width: box.borderBox.width,
     height: box.borderBox.height,
-
+    boxShadow: "0px 32px 48px -20px #D4D8DC",
     // ## Movement
     // Opting out of the standard css transition for the dragging item
     transition: getDraggingTransition(shouldAnimate, dropping),

@@ -23,7 +23,7 @@ export type DraggingStyle = {|
   transition: string,
   transform: ?string,
   zIndex: number,
-
+  boxShadow:string,
   // for combining
   opacity: ?number,
 
