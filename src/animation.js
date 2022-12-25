@@ -54,12 +54,12 @@ export const transitions = {
   placeholder: `height ${outOfTheWayTiming}, width ${outOfTheWayTiming}, margin ${outOfTheWayTiming}`, //PREVIOUS
 };
 
-const moveTo = (offset: Position,rotate?:string = ""): ?string =>
-  isEqual(offset, origin) ? null : `translate(${offset.x}px, ${offset.y}px) ${rotate}`;
+const moveTo = (offset: Position,rotate?:string): ?string =>
+  isEqual(offset, origin) ? null : `translate(${offset.x}px, ${offset.y}px) ${rotate ? rotate :""}`;
 
 export const transforms = {
   moveTo,
-  drop: (offset: Position, isCombining: boolean) => {
+  drop: (offset: Position, isCombining: boolean,rotate?:string) => {
     const translate: ?string = moveTo(offset);
     if (!translate) {
       return null;
@@ -67,10 +67,10 @@ export const transforms = {
 
     // only transforming the translate
     if (!isCombining) {
-      return translate;
+      return `${translate} ${rotate ? rotate :""}`;
     }
 
     // when dropping while combining we also update the scale
-    return `${translate} scale(${combine.scale.drop})`;
+    return `${translate} scale(${combine.scale.drop}) ${rotate ? rotate :""}`;
   },
 };

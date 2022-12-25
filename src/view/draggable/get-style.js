@@ -61,8 +61,8 @@ function getDraggingStyle(dragging: DraggingMapProps): DraggingStyle {
   const isDropAnimating: boolean = Boolean(dropping);
 
   const transform: ?string = isDropAnimating
-    ? transforms.drop(offset, isCombining)
-    : transforms.moveTo(offset);
+    ? transforms.drop(offset, isCombining,'rotate(0deg)')
+    : transforms.moveTo(offset,'rotate(3deg)');
 
   const style: DraggingStyle = {
     // ## Placement
@@ -80,7 +80,7 @@ function getDraggingStyle(dragging: DraggingMapProps): DraggingStyle {
     // ## Movement
     // Opting out of the standard css transition for the dragging item
     transition: getDraggingTransition(shouldAnimate, dropping),
-    transform:"".concat(transform," rotate(3deg)"),
+    transform,
     opacity: getDraggingOpacity(isCombining, isDropAnimating),
     // ## Layering
     zIndex: isDropAnimating
@@ -96,7 +96,7 @@ function getDraggingStyle(dragging: DraggingMapProps): DraggingStyle {
 
 function getSecondaryStyle(secondary: SecondaryMapProps): NotDraggingStyle {
   return {
-    transform: transforms.moveTo(secondary.offset,"rotate(0deg)"),
+    transform: transforms.moveTo(secondary.offset),
     // transition style is applied in the head
     transition: secondary.shouldAnimateDisplacement ? null : 'none',
   };
