@@ -55,7 +55,7 @@ export const transitions = {
 };
 
 const moveTo = (offset: Position): ?string =>
-  isEqual(offset, origin) ? null : `translate(${offset.x}px, ${offset.y}px) rotate(3deg)`;
+  isEqual(offset, origin) ? null : `translate(${offset.x}px, ${offset.y}px)`;
 
 export const transforms = {
   moveTo,
